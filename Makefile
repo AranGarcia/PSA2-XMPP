@@ -1,14 +1,15 @@
-NAME=jabberserv
 TAG=psa2:1.0
+CIDFILE=jabberapp.cid
 
 build:
 	docker image build . -t $(TAG)
 
 run:
-	docker run --name $(NAME) -it $(TAG)
+	docker run -it $(TAG)
 
 rund:
-	docker run -d --name $(NAME)
+	docker run --cidfile $(CIDFILE) -d $(TAG)
 
-copyconf:
-	docker cp $(NAME):/etc/ejabberd/ .
+stopd:
+	docker stop `cat $(CIDFILE)`
+	rm $(CIDFILE)
