@@ -14,7 +14,6 @@ make build
 make run
 ```
 
-## para ejecutar el contenedor en el fondo
-```bash
-make rund
-```
+
+## Consola administrativa
+[https://localhost:5280/admin](https://localhost:5280/admin)

@@ -5,11 +5,4 @@ build:
 	docker image build . -t $(TAG)
 
 run:
-	docker run -it $(TAG)
-
-rund:
-	docker run --cidfile $(CIDFILE) -d $(TAG)
-
-stopd:
-	docker stop `cat $(CIDFILE)`
-	rm $(CIDFILE)
+	docker run -p 5222:5222 -p 5280:5280 -it $(TAG)
