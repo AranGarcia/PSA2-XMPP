@@ -14,6 +14,11 @@ make build
 make run
 ```
 
+## Para crear un usuario admin
+
+```bash
+make admin
+```
 
 ## Consola administrativa
-[https://localhost:5280/admin](https://localhost:5280/admin)
+[https://localhost:5280/admin/](https://localhost:5280/admin/)
