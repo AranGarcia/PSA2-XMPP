@@ -16,6 +16,9 @@ make run
 
 ## Para crear un usuario admin
 
+Se necesita tener un contenedor corriendo con el servicio (esto se logra con la instrucción de
+arriba). Posteriormente, ejecuta la siguiente instrucción:
+
 ```bash
 make admin
 ```
