@@ -8,10 +8,14 @@ Servicio dockerizado de XMPP: PSA2 de la materia **Administración de Servicios 
 make build
 ```
 
-## Para ejecutar el contenedor
+## Para inicializar todos los servicios
+
+Servicios contenidos:
+- ejabberd
+- postgres
 
 ```bash
-make run
+make up
 ```
 
 ## Para crear un usuario admin
