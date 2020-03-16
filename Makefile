@@ -5,7 +5,7 @@ build:
 	docker image build . -t $(TAG)
 
 run:
-	docker run --name $(NAME) -p 5222:5222 -p 5280:5280 -it $(TAG)
+	docker run --rm --name $(NAME) -p 5222:5222 -p 5280:5280 -it $(TAG)
 
 admin:
 	docker exec -it $(NAME) bin/ejabberdctl register admin localhost password $(NAME)	
