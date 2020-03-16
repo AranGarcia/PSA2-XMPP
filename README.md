@@ -2,30 +2,30 @@
 
 Servicio dockerizado de XMPP: PSA2 de la materia **Administración de Servicios en Redes**.
 
-## Instrucciones de instalación
+## Instalación
+
+La instalación es sencilla, solo debes construír la imágen
 
 ```bash
-make build
+docker-compose build
 ```
 
-## Para inicializar todos los servicios
-
-Servicios contenidos:
-- ejabberd
-- postgres
+Después levanta el servidor y mantenlo levantado
 
 ```bash
-make up
+docker-compose up
 ```
 
-## Para crear un usuario admin
-
-Se necesita tener un contenedor corriendo con el servicio (esto se logra con la instrucción de
-arriba). Posteriormente, ejecuta la siguiente instrucción:
+Por último, crea el usuario administrativo y otros usuarios regulares con las siguientes instrucciones.
 
 ```bash
 make admin
+make create_users
 ```
 
+
 ## Consola administrativa
+
+La consola administrativa web se puede acceder mediante la siguiente URL:
+
 [https://localhost:5280/admin/](https://localhost:5280/admin/)
